@@ -24,6 +24,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 16px;
   margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
@@ -38,15 +39,40 @@
   margin-bottom: 8px;
 }
 
+.day-title-area {
+  flex: 1;
+  min-width: 0;
+}
+
+.day-title-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 229, 160, 0.35) transparent;
+}
+
+.day-title-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.day-title-scroll::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 160, 0.35);
+  border-radius: 999px;
+}
+
 .day-title-input {
+  display: block;
+  min-width: 100%;
+  width: max-content;
   background: transparent;
   border: none;
   color: var(--text);
   font-size: 28px;
   font-weight: 700;
   font-family: var(--sans);
-  width: 100%;
   outline: none;
+  white-space: nowrap;
+  padding-right: 12px;
 }
 .day-title-input::placeholder { color: var(--text3); }
 
@@ -55,5 +81,5 @@
   gap: 8px;
   align-items: center;
   flex-shrink: 0;
-  margin-left: 16px;
+  margin-left: 0;
 }

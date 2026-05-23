@@ -37,12 +37,14 @@ function DayContent() {
           <div className="day-number">
             DAY {String(currentDay.num).padStart(2, '0')}
           </div>
-          <input
-            className="day-title-input"
-            value={currentDay.title}
-            placeholder="ชื่อหัวข้อวันนี้..."
-            onChange={handleTitleChange}
-          />
+          <div className="day-title-scroll">
+            <input
+              className="day-title-input"
+              value={currentDay.title}
+              placeholder="ชื่อหัวข้อวันนี้..."
+              onChange={handleTitleChange}
+            />
+          </div>
         </div>
 
         <div className="day-controls">
